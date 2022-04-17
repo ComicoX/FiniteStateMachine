@@ -500,6 +500,7 @@ func requestDelayedCall(inElementName, inTimerName, inFunctionName):
 		creationDelayer.stop()
 	else:
 		creationDelayer = Timer.new()
+		creationDelayer.autostart = true
 		creationDelayer.set_name(inTimerName)
 		creationDelayer.one_shot = true
 		add_child(creationDelayer)
